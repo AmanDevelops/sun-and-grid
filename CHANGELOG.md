@@ -27,7 +27,7 @@ First public release.
 - Light, dark and system themes.
 - Deterministic demo mode enabled on first launch.
 - UPPCL Smart Consumers login and daily-consumption integration.
-- Minified release build with a 6 MB APK size guard, signed locally with a
+- Minified release build with a 6 MB APK size guard, signed with a
   maintainer-held private key that is not stored in this repository.
 
 ### Notes
