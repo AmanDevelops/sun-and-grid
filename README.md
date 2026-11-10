@@ -113,8 +113,29 @@ storeType=PKCS12
 ```
 
 Protect the file with `chmod 600 keystore.properties` and back up both the
-keystore and its passwords. Neither file is tracked by Git, and CI never receives
-the key; release APKs are built and signed locally by the maintainer.
+keystore and its passwords. Neither file is tracked by Git.
+
+#### GitHub Actions release signing
+
+Tagged builds are signed in CI with repository secrets. Add these under
+**Settings → Secrets and variables → Actions**:
+
+| Secret | Value |
+| --- | --- |
+| `ANDROID_KEYSTORE_BASE64` | output of `base64 -w0 ~/.android/keys/sun-and-grid-release.p12` |
+| `ANDROID_KEYSTORE_PASSWORD` | keystore password |
+| `ANDROID_KEY_ALIAS` | `sun-and-grid` |
+| `ANDROID_KEY_PASSWORD` | key password |
+
+Then publish a release by pushing a version tag:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+The release job signs the APK, verifies the signature, uploads it as a workflow
+artifact and creates a GitHub Release. Pull requests never receive the secrets.
 
 ## Connect your inverter
 

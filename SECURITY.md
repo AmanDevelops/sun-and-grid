@@ -17,9 +17,10 @@ version, reproduction steps and any relevant logs.
   protocol. It is stored in app-private DataStore storage.
 - UPPCL credentials are stored in app-private DataStore storage and sent only
   to `uppcl.eeslsmartmeter.in`. Android backups are disabled.
-- Release signing keys are **never stored in this repository**. The maintainer
-  signs release APKs locally with a private key kept outside the project; the CI
-  workflow builds only debug and unsigned release artifacts.
+- Release signing keys are **never stored in this repository**. The tagged
+  release workflow receives the keystore and passwords through encrypted GitHub
+  Actions secrets; pull-request builds never receive them. Rotate the key
+  immediately if a secret is exposed.
 
 ## Supported versions
 
