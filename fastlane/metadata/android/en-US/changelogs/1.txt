@@ -1,0 +1,5 @@
+First public release.
+
+Four-tab dashboard for a SolaX solar inverter and optional UPPCL grid usage. Includes live readings, a panels-to-grid flow card showing 100% export, month-to-date usage with a weekly chart, local history, light/dark themes and demo mode.
+
+No ads, analytics or cloud account for inverter data.

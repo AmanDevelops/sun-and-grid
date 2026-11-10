@@ -1,0 +1,17 @@
+Sun & Grid is a local-first Android dashboard for a SolaX solar inverter with a Pocket Wi-Fi dongle. It shows live solar output, the panels-to-grid flow, today's and lifetime generation, and recent history.
+
+The optional UPPCL section connects to a smart-meter account and shows month-to-date grid usage with a day-by-day calendar and a horizontally swipeable weekly chart. UPPCL credentials are stored on the device and sent only to uppcl.eeslsmartmeter.in.
+
+Features:
+- Today, Solar, Usage and Device tabs
+- Live inverter readings over the local network
+- A clear panels-to-grid flow card with 100% export
+- Month-to-date grid usage and weekly chart
+- Local reading history and optional 15-minute background sampling
+- Light, dark and system themes
+- Deterministic demo mode for trying every screen without hardware
+- No ads, analytics, tracking or cloud account for solar data
+
+The flow card is tailored to this grid-tied installation, where all generated solar is exported to the grid. Positive grid power is treated as export and can be swapped in settings for other firmware.
+
+Sun & Grid is not affiliated with SolaX Power or UPPCL. Use it with hardware you own, keep the inverter dongle on your local network, and never expose it to the internet.
