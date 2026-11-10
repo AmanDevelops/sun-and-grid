@@ -137,6 +137,14 @@ git push origin v1.0.0
 The release job signs the APK, verifies the signature, uploads it as a workflow
 artifact and creates a GitHub Release. Pull requests never receive the secrets.
 
+#### F-Droid
+
+F-Droid builds the app from source and signs it with its own key. That APK
+cannot update over the GitHub-signed APK, and vice versa; pick one source per
+device. Store metadata for the app lives in `fastlane/metadata/android/en-US/`.
+The F-Droid build uses `./gradlew assembleRelease` and needs no signing
+configuration because F-Droid signs the resulting APK itself.
+
 ## Connect your inverter
 
 1. Join the same Wi-Fi network as the inverter dongle.
