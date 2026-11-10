@@ -1,10 +1,41 @@
-# Python-generated files
+# Gradle
+.gradle/
+build/
+app/build/
+.kotlin/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+
+# Local machine configuration
+local.properties
+keystore.properties
+
+# Signing material must never be committed
+*.jks
+*.keystore
+*.p12
+
+# Build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+*.log
+
+# Local release artifacts (attach these to a GitHub Release instead)
+dist/
+
+# Python sample script
 __pycache__/
 *.py[oc]
-build/
-dist/
 wheels/
 *.egg-info
+.venv/
 
-# Virtual environments
-.venv
+# OS noise
+.DS_Store
+Thumbs.db

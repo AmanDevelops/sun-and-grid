@@ -1,0 +1,10 @@
+# Normalize text files to LF, keep Windows scripts and binaries intact.
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.jar binary
+*.jks binary
+*.ttf binary
+*.png binary
+*.jpg binary
+*.webp binary
